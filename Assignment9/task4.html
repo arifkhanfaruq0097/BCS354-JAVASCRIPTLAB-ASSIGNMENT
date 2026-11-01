@@ -1,0 +1,37 @@
+<!--
+Name : Arif Khan
+Roll No : YOUR_ROLL_NUMBER
+Assignment No : 9
+Task No : 4
+-->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h3>What is 2 + 3?</h3>
+
+    <input type="radio" name="ans" value="4">4<br>
+    <input type="radio" name="ans" value="5">5<br>
+    <input type="radio" name="ans" value="6">6<br><br>
+
+    <button onclick="checkAnswer()">Check Answer</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkAnswer() {
+            let answer = document.querySelector('input[name="ans"]:checked');
+
+            if (answer && answer.value === "5") {
+                document.getElementById("result").innerHTML = "Correct";
+            } else {
+                document.getElementById("result").innerHTML = "Try again";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

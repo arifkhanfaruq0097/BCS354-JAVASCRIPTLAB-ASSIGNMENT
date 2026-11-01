@@ -1,0 +1,30 @@
+<!--
+Name : Arif Khan
+Roll No : 2510303124
+Assignment No : 9
+Task No : 3
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="text" id="note">
+<button onclick="saveNote()">Save</button>
+
+<script>
+window.onload = function () {
+    document.getElementById("note").value =
+        localStorage.getItem("note") || "";
+};
+
+function saveNote() {
+    localStorage.setItem(
+        "note",
+        document.getElementById("note").value
+    );
+}
+</script>
+
+</body>
+</html>
